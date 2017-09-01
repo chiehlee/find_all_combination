@@ -1,0 +1,81 @@
+This is code is the solution of pre-interview code puzzle of Webley, the requirment directly pasted from https://goo.gl/MEAoif.
+
+Chieh Lee 2017/09/01
+Language used: python 2.7
+
+
+Requirements: 
+
+Write a program which will process the data listed below. The data must be placed into a csv file and read from it. The first variable is the target price and the following data values are menu items you could buy. The program should then find a combination of dishes that has a total of exactly the target price. If there is no solution if found, then the program should print that there is no combination of dishes that is equal to the target price. The program must run with different data files, so provide instructions on how to run the program from command line with the correct file. Use any programming language to solve this puzzle as long as it can be ran from linux command line. 
+Here are some sample data values: 
+
+Target price, $15.05
+
+mixed fruit,$2.15
+french fries,$2.75
+side salad,$3.35
+hot wings,$3.55
+mozzarella sticks,$4.20
+sampler plate,$5.80
+Code Objectives and Evaluation Criteria 
+
+
+Objective
+Evaluation Criteria 
+Your code must run without errors or warnings 
+Core functionality category - We’re able to run the program and output meets requirements. 
+
+Your variables and functions must be descriptive
+Code Structure Category - We’re able to follow the logic based on function and variable names, comments.
+
+Program can handle errors
+Error handling - The code will catch errors in common places, especially around inputs.
+
+
+Final Deliverable 
+
+Your code will get filtered out by spam filters, so please do not email it. The following are two acceptable methods of delivery. 
+
+Github.com  - (preffered) create an account, post your code, send us instructions on how to pull it down and run it
+Drobox Link - send us a dropbox link to your code which must be in a zip file along with any other files we may need. 
+
+Good Luck! 
+
+
+Summary:
+This is code will read the csv file, given as the first argument for execution, and print all the combination on the console, the following shows the example of output string:
+
+Combination 1:
+----------------------------------------
+mixed fruit * 7  :  $15.05
+----------------------------------------
+
+Combination 2:
+----------------------------------------
+mixed fruit * 1  :  $2.15
+hot wings * 2  :  $7.10
+sampler plate * 1  :  $5.80
+----------------------------------------
+
+If no combination is found, the program will instead print 'No combination of dishes that is equal to the target price'
+
+The program will check the format of each entry of csvfile. The format must be: 
+
+first element/line must be "Targer price, $xx.xx"
+the rest element/line must be "Name, $xx.xx"
+
+Dollar digit can be arbitary integer, cent digit only be 2 digit before decimal. If the format isn't correct the program will point out and exit(1). csv path must be given and must be a valid directory in order to run the program. 
+		
+
+result will be a mutation in class variable, self.output. self.output is LisfOfLIst, elements of outer List are ListOfInt, represents the matching combination. Element of inner list are Int, represent the occurance of each item.
+Example:
+-------
+item = [1,2,3]
+result = self.output = [[2,1,0], [1,0,1]] which means:
+(1 * 2) + (2 * 1) = target price  and
+(1 * 1) + (3 * 1) = target price
+
+	
+
+To Hire Manager:
+part of the solution has reference of coin changing problem. I started on 8/30 and finished 8/31, actual coding time was between 4-5 hours. 
